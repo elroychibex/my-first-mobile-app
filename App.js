@@ -1,7 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Alert, SafeAreaView, Button, View } from "react-native";
+import {
+  StyleSheet,
+  Alert,
+  SafeAreaView,
+  Button,
+  View,
+  Platform,
+} from "react-native";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import AppText from "./app/components/AppText";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import AppButton from "./app/components/AppButton";
 
 export default function App() {
   // const handlePress = () => {
@@ -16,9 +27,24 @@ export default function App() {
   //     console.log(text)
   //   );
   // };
-  return <WelcomeScreen />;
-}
+  return (
+    <WelcomeScreen />
 
+    // <View
+    //   style={{
+    //     flex: 1,
+    //     justifyContent: "center",
+    //     alignItems: "center",
+    //   }}>
+    //   <AppText>I love React Native</AppText>
+    //   <MaterialCommunityIcons name="email" size={100} color="dodgerblue" />
+    //   <AppButton
+    //     title="Press Me"
+    //     onPress={() => console.log("I was Pressed")}
+    //   />
+    // </View>
+  );
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
